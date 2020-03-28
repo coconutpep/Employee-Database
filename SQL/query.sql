@@ -32,3 +32,7 @@ SELECT emp_no, first_name, last_name, dept_name
 FROM emp_with_dept
 WHERE dept_name = 'Sales';
 
+--List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+SELECT emp_no, first_name, last_name, dept_name
+FROM emp_with_dept
+WHERE dept_name = 'Sales' OR dept_name = 'Development';
