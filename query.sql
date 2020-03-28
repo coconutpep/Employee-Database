@@ -8,3 +8,9 @@ ON e.emp_no=s.emp_no;
 SELECT emp_no, first_name, last_name, hire_date
 FROM employees
 WHERE hire_date LIKE '1986%';
+
+--List managers' department number, department name, employee number, last name, first name, start and end employment dates
+SELECT m.emp_no, m.dept_no, d.dept_name, e.first_name, e.last_name,  m.from_date, m.to_date
+FROM dept_manager AS m
+JOIN departments AS d ON m.dept_no=d.dept_no
+JOIN employees AS e ON m.emp_no=e.emp_no;
