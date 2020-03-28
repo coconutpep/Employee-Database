@@ -36,3 +36,9 @@ WHERE dept_name = 'Sales';
 SELECT emp_no, first_name, last_name, dept_name
 FROM emp_with_dept
 WHERE dept_name = 'Sales' OR dept_name = 'Development';
+
+--In descending order, list the frequency count of employee last names
+SELECT last_name, COUNT(last_name) AS frequency
+FROM employees
+GROUP BY last_name
+ORDER BY frequency DESC;
