@@ -16,6 +16,7 @@ JOIN departments AS d ON m.dept_no=d.dept_no
 JOIN employees AS e ON m.emp_no=e.emp_no;
 
 --List the department of each employee with the following information: employee number, last name, first name, and department name
+CREATE VIEW emp_with_dept AS
 SELECT de.emp_no, e.first_name, e.last_name, d.dept_name
 FROM dept_emp AS de
 JOIN employees AS e ON de.emp_no=e.emp_no
@@ -25,3 +26,9 @@ JOIN departments AS d ON de.dept_no=d.dept_no;
 SELECT emp_no, first_name, last_name
 FROM employees
 WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
+
+--List all employees in the Sales department, including their employee number, last name, first name, and department name.
+SELECT emp_no, first_name, last_name, dept_name
+FROM emp_with_dept
+WHERE dept_name = 'Sales';
+
