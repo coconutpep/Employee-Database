@@ -1,4 +1,4 @@
-deparments as d
+departments as d
 ---------------
 dept_no PK string
 dept_name string UNIQUE
