@@ -7,35 +7,35 @@ dept_emp as d_emp
 -----------------
 emp_no int FK >- e.emp_no
 dept_no string FK >- d.dept_no
-from_date string
-to_date string
+from_date date
+to_date date
 
 dept_manager as d_man
 ---------------------
 dept_no string FK >- d.dept_no
 emp_no int FK >- e.emp_no
-from_date string
-to_date string
+from_date date
+to_date date
 
 employees as e
 --------------
 emp_no PK int
-birth_date string
+birth_date date
 first_name string
 last_name string
 gender string
-hire_date string
+hire_date date
 
 salaries as s
 -------------
 emp_no int FK >- e.emp_no
-salary int
-from_date string
-to_date string
+salary money
+from_date date
+to_date date
 
 titles as t
 -----------
 emp_no int FK >- e.emp_no
 title string
-from_date string
-to_date string
+from_date date
+to_date date
